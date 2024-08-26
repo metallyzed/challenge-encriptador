@@ -1,3 +1,4 @@
+// Hash keys to be used
 const hashKeys = {
     'a' : 'ai',
     'e': 'enter',
@@ -6,6 +7,7 @@ const hashKeys = {
     'u': 'ufat'
 }
 
+// Keys to make the reverse
 const reverseKeys = {
     'ai': 'a',
     'enter': 'e',
@@ -14,6 +16,7 @@ const reverseKeys = {
     'ufat': 'u'
 }
 
+// Encode function
 function encode(text) {
     let modifiedText = '';
     for (let char of text) {
@@ -22,6 +25,7 @@ function encode(text) {
     return modifiedText
 }
 
+// Decode function
 function decode(text) {
     let modifiedText = text;
     for (let reverseKey in reverseKeys) {
@@ -30,10 +34,12 @@ function decode(text) {
     return modifiedText;
 }
 
+// Encode example
 const original = "gato";
 const encodeText = encode(original);
 console.log(encodeText);
 
+// Decode example
 const originalEncoded = "gaitober";
 const decodedText = decode(originalEncoded);
 console.log(decodedText);
