@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="color: #0A3871;">Códificador/Decodificador de texto</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+</head>
+<body style="background-color: #F3F5FC">
+
+    <h1 style="text-align: left; margin-left: 2%; margin-right: 0; margin-top: 0;">Códificador/Decodificador de texto</h1>
+
+    <div class="container">
+        <div class="text-area">
+            <textarea id="inputText" placeholder="Ingrese el texto aqui" style="border-radius: 1%;"></textarea>
+
+            <div class="line-with-icon">
+                <img src="./assets/bi_exclamation-circle-fill.png" alt="warning" class="icon">
+                <span class="icon-text">Solo letras minúsculas y sin acentos</span>
+            </div>
+
+            <div class="buttons" id="buttons">
+                <button class="encode" onclick="encode(document.getElementById('inputText').value)">Encriptar</button>
+                <button class="decode" onclick="decode(document.getElementById('inputText').value)">Desencriptar</button>
+            </div>
+        </div>
+
+        <div class="text-area">
+            <div id="outputPlaceholder" class="placeholder">
+                <img src="./assets/muñeco.png" alt="Placeholder Image" style="color: black;">
+                <h3>Ningún mensaje fue encontrado</h3>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+
+            <textarea id="outputText" readonly style="display: none; border-radius: 1%;"></textarea>
+            <button id="copy-button" class="copy" onclick="copyOutputText()" style="display: none;">Copiar</button>
+        </div>
+    </div>
+
+    <script src="./src/main.js"></script>
+
+</body>
+</html>
